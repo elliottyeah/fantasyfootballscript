@@ -1,0 +1,53 @@
+{% extends "home/index.html" %}
+{% block head %}
+            <meta name="msvalidate.01" content="62C8947685D92FCE20F12565A6344A5B" />
+            <meta name="google-site-verification" content="lbGF4LW9tAGOiGEqjFzU_6UrR6MDCuDmMhFbSYyVgJM" />
+            <title>Enter your criteria.</title>
+            <meta name=”description” content="Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions."/>
+            <meta property=”og:title” content=”Fantasy Premier League Scout” />
+            <meta property=”og:type” content=”website”/>
+            <meta property=”og:image” content=”http://www.fantasypremierleaguescout.com/static/images/smaller_PS9F6BF99L.jpg”/>
+            <meta property=”og:description” content=”Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions.”/>
+            <meta property=”fb:admins” content=”562590337” />
+            <meta name=”twitter:card” content=”Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions.”>
+            <meta name=”twitter:url” content=”http://www.fantasypremierleaguescout.com/player_form”>
+            <!--
+            <meta name=”twitter:description” content=”Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions.”>
+            -->
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="content">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+        <h1>
+            Enter a position and your budget to get a recommendation based on
+            the player's next three fixtures and their recent form.
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4" >
+            <form action='/player-results.html' method="POST">
+                {% csrf_token %}
+                <div class="form-group-lg">
+                    {{ form.position }}
+                </div>
+                <div class="form-group-lg">
+                    {{ form.cash }}
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="save btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+
+        </p>
+    </div>
+</div>
+{% endblock %}
+

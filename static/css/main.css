@@ -1,0 +1,234 @@
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro:400,200,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,200,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* colours */
+/* set colours for site */
+
+
+$green: #74d4b3;
+$red: #ef8974;
+$black: #2C2E31;
+$gray: #5F6164;
+$light_gray: #ccc;
+$white: #fff;
+
+table {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: x-large;
+}
+
+#homeButton {
+    display: block;
+    font-size: x-large;
+    color: #777;
+    padding: 10px;
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-extra-padding {
+	padding-bottom:20px; /* Height of the footer element */
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+}
+
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+
+ a::hover {
+     color:transparent;
+ }
+}
+
+
+
+
+
+
+.form-control {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.btn {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+content {
+	padding-bottom:200px; /* Height of the footer element */
+}
+
+content-extra-padding {
+	padding-bottom:400px; /* Height of the footer element */
+}
+
+.input-group {
+    padding-bottom:20px;
+}
+
+.form-group-lg {
+    padding-bottom:20px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    background-color: lightblue;
+}
+
+.content {
+    text-align: center;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.player_name {
+    text-align: center;
+}
+
+.btn-info {
+    background-color: lightblue;
+}
+
+.navbar-default {
+    background-color: lightblue;
+}
+
+.table {
+    font-size: 16px;
+}
+
+ul {
+	text-align: center;
+}
+
+.navbar-nav {
+    float: none;
+    margin: 0 auto;
+    display: table;
+    font-size: x-large;
+}
+
+.btn.newclass {
+    width:25%;
+    display:block;
+    margin: 0 auto;
+}
+
+
+/*
+footer {
+	background:#f5f5f5;
+	width:100%;
+	height:20px;
+	position: fixed;
+	bottom:0;
+	left:0;
+}
+*/
+/*
+footer {
+    position: relative;
+    margin-top: 70px;
+    background:#f5f5f5;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    color: #555;
+}
+
+
+
+.social {
+
+    text-align: center;
+
+    .a {
+        width: 120px;
+		height: 140px;
+		display: inline-block;
+		margin: 20px;
+		list-style: none;
+
+
+        .share-btn {
+            width: 40px;
+    		height: 40px;
+    		color: #FFFFFF;
+    		font-size: 3.4em;
+    		text-align: center;
+    		line-height: 120px;
+    		background-color: #f5f5f5;
+    		transition: all 0.5s ease;
+
+        }
+    }
+}
+
+.share-btn:hover {
+  color: #eeeeee;
+}
+*/

@@ -1,0 +1,9 @@
+{% extends "home/index.html" %}
+
+{% block content %}
+    {% for post in players %}
+        <div class="players">
+            <h1><a href="">{{ player.name }}</a></h1>
+        </div>
+    {% endfor %}
+{% endblock content %}

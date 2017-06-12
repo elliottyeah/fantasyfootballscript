@@ -1,0 +1,102 @@
+{% extends "home/index_test.html" %}
+{% block head %}
+            <meta name="msvalidate.01" content="62C8947685D92FCE20F12565A6344A5B" />
+            <meta name="google-site-verification" content="lbGF4LW9tAGOiGEqjFzU_6UrR6MDCuDmMhFbSYyVgJM" />
+            <title>Send a message.</title>
+            <meta name=”description” content="Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions."/>
+            <meta property=”og:title” content=”Fantasy Premier League Scout” />
+            <meta property=”og:type” content=”website”/>
+            <meta property=”og:image” content=”http://www.fantasypremierleaguescout.com/static/images/smaller_PS9F6BF99L.jpg”/>
+            <meta property=”og:description” content=”Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions.”/>
+            <meta property=”fb:admins” content=”562590337” />
+            <meta name=”twitter:card” content=”Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions.”>
+            <meta name=”twitter:url” content=”http://www.fantasypremierleaguescout.com/player_form”>
+            <!--
+            <meta name=”twitter:description” content=”Don't know who to choose for your Fantasy Premier League team? Visit FPLS for tips and suggestions.”>
+            -->
+{% endblock %}
+{% block content %}
+
+<div class="content">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4" >
+
+            <h3>
+                Email: <a href="mailto:info@fantasypremierleaguescout.com">info@fantasypremierleaguescout.com</a>
+            </h3>
+            <h2>
+
+            </h2>
+            <h2>
+                To suggest an improvement to the model, request an additional feature or
+                report a bug use the contact form below.
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4" >
+            <form role="form" action="/contact.html" method="post">
+                {% csrf_token %}
+                <div class="input-group input-group-lg">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </span>
+                    {{ form.contact_name }}
+                    <br>
+                </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </span>
+                    {{ form.contact_email }}
+                    <br>
+                </div>
+                <div class="form-group">
+                    {{ form.content }}
+                </div>
+                <div class="content-extra-padding">
+                    <div class="text-center">
+                        <button type="submit" class="save btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <h2>
+            Share the site:
+        </h2>
+        <div class="share-buttons">
+
+
+            <a href="http://www.facebook.com/sharer.php?u=http://www.fantasypremierleaguescout.com/home" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.fantasypremierleaguescout.com/home" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/share?url=http://www.fantasypremierleaguescout.com/home&amp;text=Fantasy%20Premier%20League%20Scout&amp;hashtags=FPLScout" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+            </a>
+
+
+
+        </div>
+    </div>
+    <div class="row">
+        <h2>
+            Donate to help with the running costs of the site:
+        </h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="FRKCNPMZD8XNU">
+            <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!---<script src="/static/js/bootstrap.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+		<link rel="stylesheet" href="/static/css/bootstrap-select.css">
+		<script src="/static/js/bootstrap-select.js"></script>
+		<script src="/static/js/my_ajax.js"></script>
+        <script src="/static/js/main.js"></script>
+
+		<title>Fantasy Premier League Player Picker</title>
+	</head>
+<body>
+
+	<div class="nav">
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<ul class="nav navbar-nav">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+		</div>
+	</div>
+    <div class="content">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-10 col-md-offset-1">
+                <p>
+                    This is a tool for selecting which player to select for your Fantasy Premier League team based on your budget, the players next three fixtures and their recent form.
+                </p>
+            </div>
+            <div class="col-md-4">
+                 <p>
+                    To learn more about how the site was made and how the players expected points were calculated click here.
+                </p>
+            </div>
+            <div class="col-md-4">
+                 <p>
+                    To view the full list of players click here.
+                </p>
+            </div>
+            <div class="col-md-4">
+                 <p>
+                    To suggest improvements to the model, offer a donation or request new features click here.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form name="my_form" class="form-horizontal" action="{{ action }}" role="form" method="post" onsubmit="myFunction()">
+                {% csrf_token %}
+                {% for field in form %}
+                {{ field }}
+                {% endfor %}
+                <!--<input type='submit' value='Submit Now' />-->
+
+                <div class="form-group">
+                    <label for="pos">Position</label>
+                        <select id="pos" class="selectpicker show-tick form-control">
+                                <option value="gk">Goalkeeper</option>
+                                <option value="df">Defender</option>
+                                <option value="md">Midfielder</option>
+                                <option value="fw">Forward</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="cash">Money to Spend</label>
+                        <!-- Options for money -->
+                        <select id="cash" class="selectpicker show-tick form-control">
+                                <option value="4.0">4.0</option>
+                                <option value="4.1">4.1</option>
+                                <option value="4.2">4.2</option>
+                                <option value="4.3">4.3</option>
+                                <option value="4.4">4.4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="4.6">4.6</option>
+                                <option value="4.7">4.7</option>
+                                <option value="4.8">4.8</option>
+                                <option value="4.9">4.9</option>
+                                <option value="5.0">5.0</option>
+                                <option value="5.1">5.1</option>
+                                <option value="5.2">5.2</option>
+                                <option value="5.3">5.3</option>
+                                <option value="5.4">5.4</option>
+                                <option value="5.5">5.5</option>
+                                <option value="5.6">5.6</option>
+                                <option value="5.7">5.7</option>
+                                <option value="5.8">5.8</option>
+                                <option value="5.9">5.9</option>
+                                <option value="6.0">6.0</option>
+                                <option value="6.1">6.1</option>
+                                <option value="6.2">6.2</option>
+                                <option value="6.3">6.3</option>
+                                <option value="6.4">6.4</option>
+                                <option value="6.5">6.5</option>
+                                <option value="6.6">6.6</option>
+                                <option value="6.7">6.7</option>
+                                <option value="6.8">6.8</option>
+                                <option value="6.9">6.9</option>
+                                <option value="7.0">7.0</option>
+                                <option value="7.1">7.1</option>
+                                <option value="7.2">7.2</option>
+                                <option value="7.3">7.3</option>
+                                <option value="7.4">7.4</option>
+                                <option value="7.5">7.5</option>
+                                <option value="7.6">7.6</option>
+                                <option value="7.7">7.7</option>
+                                <option value="7.8">7.8</option>
+                                <option value="7.9">7.9</option>
+                                <option value="8.0">8.0</option>
+                                <option value="8.1">8.1</option>
+                                <option value="8.2">8.2</option>
+                                <option value="8.3">8.3</option>
+                                <option value="8.4">8.4</option>
+                                <option value="8.5">8.5</option>
+                                <option value="8.6">8.6</option>
+                                <option value="8.7">8.7</option>
+                                <option value="8.8">8.8</option>
+                                <option value="8.9">8.9</option>
+                                <option value="9.0">9.0</option>
+                                <option value="9.1">9.1</option>
+                                <option value="9.2">9.2</option>
+                                <option value="9.3">9.3</option>
+                                <option value="9.4">9.4</option>
+                                <option value="9.5">9.5</option>
+                                <option value="9.6">9.6</option>
+                                <option value="9.7">9.7</option>
+                                <option value="9.8">9.8</option>
+                                <option value="9.9">9.9</option>
+                                <option value="10.0">10.0</option>
+                                <option value="10.1">10.1</option>
+                                <option value="10.2">10.2</option>
+                                <option value="10.3">10.3</option>
+                                <option value="10.4">10.4</option>
+                                <option value="10.5">10.5</option>
+                                <option value="10.6">10.6</option>
+                                <option value="10.7">10.7</option>
+                                <option value="10.8">10.8</option>
+                                <option value="10.9">10.9</option>
+                                <option value="11.0">11.0</option>
+                                <option value="11.1">11.1</option>
+                                <option value="11.2">11.2</option>
+                                <option value="11.3">11.3</option>
+                                <option value="11.4">11.4</option>
+                                <option value="11.5">11.5</option>
+                                <option value="11.6">11.6</option>
+                                <option value="11.7">11.7</option>
+                                <option value="11.8">11.8</option>
+                                <option value="11.9">11.9</option>
+                                <option value="12.0">12.0</option>
+                                <option value="12.1">12.1</option>
+                                <option value="12.2">12.2</option>
+                                <option value="12.3">12.3</option>
+                                <option value="12.4">12.4</option>
+                                <option value="12.5">12.5</option>
+                                <option value="12.6">12.6</option>
+                                <option value="12.7">12.7</option>
+                                <option value="12.8">12.8</option>
+                                <option value="12.9">12.9</option>
+                                <option value="13.0">13.0</option>
+                                <option value="13.1">13.1</option>
+                                <option value="13.2">13.2</option>
+                                <option value="13.3">13.3</option>
+                                <option value="13.4">13.4</option>
+                                <option value="13.5">13.5</option>
+                                <option value="13.6">13.6</option>
+                                <option value="13.7">13.7</option>
+                                <option value="13.8">13.8</option>
+                                <option value="13.9">13.9</option>
+                        </select>
+                    </div>
+                <button class="btn btn-large btn-primary newclass" type="sumbit" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="hidden-text" style="display: none;">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="container">
+                <table class="table">
+                   <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Team</th>
+                        <th>Value</th>
+                        <th>News</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Wayne Rooney</td>
+                        <td>MUN</td>
+                        <td>£8.9</td>
+                        <td>None</td>
+                      </tr>
+                      <tr>
+                        <td>Troy Deeney</td>
+                        <td>WAT</td>
+                        <td>£6.1</td>
+                        <td>75% Chance</td>
+                      </tr>
+                      <tr>
+                        <td>Diego Costa</td>
+                        <td>CHE</td>
+                        <td>£10.3</td>
+                        <td>None</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<script>
+      $('.selectpicker').selectpicker({
+      style: 'btn-info',
+      size: 4
+  });
+
+</script>
+
+<script>
+
+</script>
+
+</body>
+</html>

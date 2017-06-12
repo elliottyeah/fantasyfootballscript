@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+		<link rel="stylesheet" href="/static/css/bootstrap-select.css">
+		<script src="/static/js/bootstrap-select.js"></script>
+		<script src="/static/js/my_ajax.js"></script>
+        <script src="/static/js/main.js"></script>
+	    {% block head %}
+        {% endblock %}
+	</head>
+    <body>
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PNDWN7"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PNDWN7');</script>
+        <!-- End Google Tag Manager -->
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '861692363946022',
+              xfbml      : true,
+              version    : 'v2.5'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="nav">
+    		<div class="container">
+    			<nav class="navbar navbar-default" role="navigation">
+    			    <div class="navbar-header">
+    			        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+    			        <li>
+    			            <a href='/home' id="homeButton"><span class="glyphicon glyphicon-home fa-x"></span></span></a>
+    			         </li>
+    			    </div>
+    			    <div class="collapse navbar-collapse" id="myNavbar">
+         				<ul class="nav navbar-nav">
+        				    <li><a href="/about">About</a></li>
+        				    <li><a href='/player-search'>Scout</a></li>
+        					<li><a href="/contact">Contact</a></li>
+        				</ul>
+    				</div>
+    		</div>
+    	</div>
+        <!-- Page Content -->
+        <div class="containter-fluid">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+    <footer>
+        <script>
+            (function(i,s,o,g,r,a,m){
+                i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)
+
+                },i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })
+            (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-69226960-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    </footer>
+</html>
